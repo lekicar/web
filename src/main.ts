@@ -9,19 +9,18 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './style/global.scss'
 
-import { registerGlobComp } from "@/components/registerGlobComp";
+import { registerGlobComp } from '@/components/registerGlobComp'
 
-
-(async () => {
-  const app = createApp(App);
+;(async () => {
+  const app = createApp(App)
 
   // Register global components
-  registerGlobComp(app);
+  registerGlobComp(app)
 
-  app.use(store);
-  app.use(ElementPlus);
-  app.use(router);
-  await router.isReady();
+  app.use(store)
+  app.use(ElementPlus)
+  app.use(router)
+  await router.isReady()
 
-  app.mount("#app");
-})();
+  app.mount('#app')
+})()

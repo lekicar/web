@@ -14,5 +14,5 @@ module.exports = {
     'vue',
     '@typescript-eslint',
     'plugin:prettier/recommended' // 添加 prettier 插件
-  ],
+  ]
 }

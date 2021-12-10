@@ -1,4 +1,4 @@
-import { isIos } from "@/utils/equipmentVerify"
+import { isIos } from '@/utils/equipmentVerify'
 export const toDownloadLink = () => {
   if (isIos()) {
     window.location.href = 'https://itunes.apple.com/cn/app/id1570793242?mt=8'

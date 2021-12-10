@@ -30,8 +30,8 @@ const routes: Array<RouteRecordRaw> = [
     redirect: { name: 'Details', query: { model: 'download' } }
   },
   {
-    path: "/:catchAll(.*)", // 不识别的path自动匹配首页
-    redirect: '/',
+    path: '/:catchAll(.*)', // 不识别的path自动匹配首页
+    redirect: '/'
   }
 ]
 

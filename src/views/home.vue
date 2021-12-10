@@ -14,7 +14,8 @@
           </div>
         </div>
       </header>
-      <section class="device-feature-box"> 
+      <section class="device-feature-box">
+         
         <div class="home-content">
           <div class="device-feature">
             <div class="feature-media">
@@ -60,11 +61,9 @@
       <section class="device-introduce-box">
         <div class="home-content">
           <div>
-            <img src="../../public/assets/img/common/use_car.png" alt="">
+            <img src="../../public/assets/img/common/use_car.png" alt="" />
           </div>
-          <div>
-
-          </div>
+          <div></div>
         </div>
       </section>
     </main>

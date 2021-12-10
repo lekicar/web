@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs, onMounted } from 'vue'
-import { useRoute } from 'vue-router';
+import { useRoute } from 'vue-router'
 import { ElMessageBox, ElMessage } from 'element-plus'
 import { toDownloadLink } from '@/common/downloadApp'
 import { IsPC } from '../utils/equipmentVerify'
@@ -30,20 +30,20 @@ export default defineComponent({
     })
     onMounted(() => {
       console.log('onMounted')
-      console.log("route", route.query)
+      console.log('route', route.query)
       if (route.query.model === 'download') toDownloadLink()
     })
     async function toWechat() {
       const clipboard = new Clipboard('.service')
-      let msg = "复制账号成功"
-        clipboard.on('success', function (e) {
-          e.clearSelection()
-          msg = "复制账号成功"
-        })
-        clipboard.on('error', function (e) {
-          e.clearSelection()
-          msg = "复制账号失败，请手动添加微信：Oazon_Leki"
-        });
+      let msg = '复制账号成功'
+      clipboard.on('success', function (e) {
+        e.clearSelection()
+        msg = '复制账号成功'
+      })
+      clipboard.on('error', function (e) {
+        e.clearSelection()
+        msg = '复制账号失败，请手动添加微信：Oazon_Leki'
+      })
       if (IsPC()) {
         await ElMessageBox.confirm('Leki客服微信: Oazon_Leki', '联系客服', {
           confirmButtonText: '点击复制',

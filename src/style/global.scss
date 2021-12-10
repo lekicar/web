@@ -1,12 +1,36 @@
 html {
   // font-family: sans-serif; /* 默认字体 */
-  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
-  'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    '微软雅黑', Arial, sans-serif;
   font-size: 100%; /* 调整字体大小 */
   -ms-text-size-adjust: 100%; /* IE浏览器 */
   -webkit-text-size-adjust: 100%; /* FireFox浏览器 */
 }
-body, blockquote, body, dd, dl, dt, fieldset, figcaption, figure, form, h1, h2, h3, h4, h5, h6, hr, html, legend, li, ol, p, pre, table, ul {
+body,
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+legend,
+li,
+ol,
+p,
+pre,
+table,
+ul {
   margin: 0; /* 外边距 */
   padding: 0; /* 内边距 */
   border: 0; /* 边框 */
@@ -16,10 +40,11 @@ a {
 }
 
 * {
-  font-style: normal!important;
+  font-style: normal !important;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
