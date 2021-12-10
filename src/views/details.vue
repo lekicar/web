@@ -72,6 +72,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .details {
+  background: #1f1f1f;
   main {
     display: block;
     max-width: 1000px;
