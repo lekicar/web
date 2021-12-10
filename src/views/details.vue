@@ -15,18 +15,23 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs, onMounted } from 'vue'
+import { useRoute } from 'vue-router';
 import { ElMessageBox, ElMessage } from 'element-plus'
+import { toDownloadLink } from '@/common/downloadApp'
 import { IsPC } from '../utils/equipmentVerify'
 import Clipboard from 'clipboard'
 export default defineComponent({
   name: 'details',
   components: {},
   setup() {
+    const route = useRoute()
     const state = reactive({
       loading: false
     })
     onMounted(() => {
       console.log('onMounted')
+      console.log("route", route.query)
+      if (route.query.model === 'download') toDownloadLink()
     })
     async function toWechat() {
       const clipboard = new Clipboard('.service')

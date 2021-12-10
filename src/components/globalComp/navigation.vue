@@ -8,7 +8,7 @@
         </div>
         <div class="navigation-items clear" :class="{ 'items-is-open': showMenu }">
           <div class="navigation-download">
-            <el-button class="download-leki" @click="toDownloadLink">下载 Leki车控</el-button>
+            <el-button class="download-leki" @click="downloadLink">下载 Leki车控</el-button>
           </div>
           <div class="navigation-menu">
             <nav class="menu">
@@ -35,6 +35,7 @@
 import { defineComponent, reactive, toRefs, onMounted } from 'vue'
 import fileDownload from 'js-file-download'
 import axios from '../../utils/axios'
+import { toDownloadLink } from '@/common/downloadApp'
 import { ElMessage } from 'element-plus'
 import { isIos } from '../../utils/equipmentVerify'
 import router from '../../router'
@@ -76,21 +77,16 @@ export default defineComponent({
       }
       router.push(link)
     }
-    function toDownloadLink() {
+    function downloadLink() {
       state.showMenu = false
-      if (isIos()) {
-        window.location.href = 'https://itunes.apple.com/cn/app/id1570793242?mt=8'
-      } else {
-        window.location.href =
-          'https://download.bq04.com/apps/60dac7eb0d81cc2e21ab3df0/install?download_token=39b644477d32a9d8de357b761fb3bd16&source=update'
-      }
+      toDownloadLink()
     }
     return {
       ...toRefs(state),
       switchMenu,
       downloadHelp,
       toLink,
-      toDownloadLink
+      downloadLink
     }
   }
 })

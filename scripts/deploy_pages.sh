@@ -8,8 +8,6 @@
 # git subtree push --prefix $1 origin gh-pages
 
 
-
-
 cp ../CNAME ../dist
 git subtree push --prefix dist origin gh-pages
 echo "./dist deploy to GitHub Pages succeed!"
